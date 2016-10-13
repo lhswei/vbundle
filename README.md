@@ -13,12 +13,17 @@
 #step:
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 git clone https://github.com/lhswei/mygit.git ~/temp
+
 cp ~/temp/mappings.vim ~/.vim/
+
 cp ~/temp/.vimrc ~/.vim/
 
 vim ~/.vimrc  #edit with 
+
 source ~/.vim/.vimrc       
+
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
 #save and then 
