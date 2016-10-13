@@ -41,6 +41,7 @@ Plugin 'VundleVim/Vundle.vim'
 " the-nerd-tree
 Plugin 'The-NERD-tree'
 Plugin 'jellybeans.vim'
+Plugin 'lookupfile'
 
 Plugin 'mappingmanager'
 " All of your Plugins must be added before the following line
