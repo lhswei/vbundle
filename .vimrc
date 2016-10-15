@@ -25,11 +25,12 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-"Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
-"Plugin 'L9'
+Plugin 'L9'
 " Git plugin not hosted on GitHub
 "Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'https://github.com/xolox/vim-misc.git' 
 " git repos on your local machine (i.e. when working on your own plugin)
 "Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
@@ -39,9 +40,22 @@ Plugin 'VundleVim/Vundle.vim'
 " different version somewhere else.
 "Plugin 'ascenator/L9', {'name': 'newL9'}
 " the-nerd-tree
+Plugin 'FuzzyFinder'
 Plugin 'The-NERD-tree'
 Plugin 'jellybeans.vim'
-Plugin 'lookupfile'
+Plugin 'genutils'
+Plugin 'ctrlp.vim'
+Plugin 'powerline/powerline'
+Plugin 'lua.vim'
+Plugin 'taglist.vim'
+"Plugin 'listmaps.vim'
+Plugin 'AutoComplPop'
+Plugin 'bufexplorer.zip'
+Plugin 'Find-files'
+Plugin 'findfuncname.vim'
+Plugin 'find_in_files'
+Plugin 'command-list'
+Plugin 'neocomplcache-snippets_complete'
 
 Plugin 'mappingmanager'
 " All of your Plugins must be added before the following line
@@ -61,10 +75,34 @@ filetype plugin indent on    " required
 " 配色
 :colorscheme jellybeans
 
+" complete start
+ 
+"powerline
+ set guifont=PowerlineSymbols\ for\ Powerline
+" taglist start 
+let Tlist_Show_One_File=1  
+let Tlist_Exit_OnlyWindow=1 
+" taglist end
+" complete end
+" ctrlp configure star
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.exe     " MacOSX/Linux
+let g:ctrlp_custom_ignore = {
+      \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+      \ 'file': '\v\.(exe|so|dll)$',
+      \ 'link': 'some_bad_symbolic_links',
+      \ }
+let g:ctrlp_mruf_include ='\.c$\|\.cpp$|\.hpp$|\.cc$|\.h$|\.ini$|\.txt$|\.xml$|\.lua$|\.prot$|\.vim$'
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:20'
+" ctrlp configure end
 
-
-
-
+" powerline config start                
+set guifont=PowerlineSymbols\ for\ Powerline
+set nocompatible           
+set t_Co=256               
+let g:Powerline_symbols = 'fancy'
+set laststatus=2                    "一个文件也要有状态栏           
+let Grep_Default_Filelist = '*.c *.cpp *.hpp *.cc *.h *.ini *.txt *.xml *.lua *.proto *.vim'
+" powerline config end
 
 
 

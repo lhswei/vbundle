@@ -1,2 +1,7 @@
 \.*.swp
 bundle/
+tags
+test.c
+*.out
+*.out.in
+*.out.po
