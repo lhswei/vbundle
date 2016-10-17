@@ -29,8 +29,7 @@ Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'L9'
 " Git plugin not hosted on GitHub
-"Plugin 'git://git.wincent.com/command-t.git'
-Plugin 'https://github.com/lhswei/command-t.git'
+Plugin 'https://github.com/lhswei/command-t.git' "Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'https://github.com/xolox/vim-misc.git' 
 " git repos on your local machine (i.e. when working on your own plugin)
 "Plugin 'file:///home/gmarik/path/to/plugin'
@@ -49,14 +48,12 @@ Plugin 'ctrlp.vim'
 Plugin 'powerline/powerline'
 Plugin 'lua.vim'
 Plugin 'taglist.vim'
-"Plugin 'listmaps.vim'
+Plugin 'listmaps.vim'
 Plugin 'AutoComplPop'
 Plugin 'bufexplorer.zip'
-Plugin 'Find-files'
 Plugin 'findfuncname.vim'
 Plugin 'find_in_files'
-"Plugin 'command-list'
-Plugin 'https://github.com/lhswei/command-list.git'
+Plugin 'https://github.com/lhswei/command-list.git' "Plugin 'command-list'
 Plugin 'neocomplcache-snippets_complete'
 
 Plugin 'mappingmanager'
@@ -78,8 +75,11 @@ filetype plugin indent on    " required
 :colorscheme jellybeans
 
 " complete start
+" complete end
+" command-t start
 let g:CommandTMaxHeight=10
 let g:CommandTMatchWindowAtTop=0
+" command-t end
 "powerline
  set guifont=PowerlineSymbols\ for\ Powerline
 " taglist start 
@@ -107,11 +107,8 @@ set laststatus=2                    "一个文件也要有状态栏
 let Grep_Default_Filelist = '*.c *.cpp *.hpp *.cc *.h *.ini *.txt *.xml *.lua *.proto *.vim'
 " powerline config end
 
-
-
 " end of external plugin
 " 保存配置文件立即生效
 autocmd! bufwritepost .vimrc source ~/.vimrc
 "/搜索大小写不敏感
 set ignorecase
-
