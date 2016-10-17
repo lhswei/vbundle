@@ -30,6 +30,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'L9'
 " Git plugin not hosted on GitHub
 "Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'https://github.com/lhswei/command-t.git'
 Plugin 'https://github.com/xolox/vim-misc.git' 
 " git repos on your local machine (i.e. when working on your own plugin)
 "Plugin 'file:///home/gmarik/path/to/plugin'
@@ -54,7 +55,8 @@ Plugin 'bufexplorer.zip'
 Plugin 'Find-files'
 Plugin 'findfuncname.vim'
 Plugin 'find_in_files'
-Plugin 'command-list'
+"Plugin 'command-list'
+Plugin 'https://github.com/lhswei/command-list.git'
 Plugin 'neocomplcache-snippets_complete'
 
 Plugin 'mappingmanager'
@@ -76,7 +78,8 @@ filetype plugin indent on    " required
 :colorscheme jellybeans
 
 " complete start
- 
+let g:CommandTMaxHeight=10
+let g:CommandTMatchWindowAtTop=0
 "powerline
  set guifont=PowerlineSymbols\ for\ Powerline
 " taglist start 
