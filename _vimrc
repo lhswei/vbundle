@@ -52,9 +52,9 @@ Plugin 'listmaps.vim'
 Plugin 'AutoComplPop'
 Plugin 'bufexplorer.zip'
 Plugin 'findfuncname.vim'
-Plugin 'find_in_files'
 Plugin 'https://github.com/lhswei/command-list.git' "Plugin 'command-list'
 Plugin 'neocomplcache-snippets_complete'
+Plugin 'easymotion/vim-easymotion'
 
 Plugin 'mappingmanager'
 " All of your Plugins must be added before the following line
