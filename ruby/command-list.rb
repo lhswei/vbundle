@@ -111,7 +111,7 @@ CommandList::register_list(
 )
 CommandList::register_list(
   :name  => 'list',
-  :map   =>'<LEADER>l',
+  :map   =>'<LEADER>g',
   :map_item_with_list => true,
   :items => [
 	{
