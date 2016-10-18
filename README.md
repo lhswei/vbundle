@@ -12,6 +12,8 @@
 
 #step:
 
+git clone https://github.com/lhswei/vbundle.git
+
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 vim ~/.vimrc  #edit with 
