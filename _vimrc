@@ -54,6 +54,8 @@ Plugin 'findfuncname.vim'
 Plugin 'https://github.com/lhswei/command-list.git' "Plugin 'command-list'
 Plugin 'neocomplcache-snippets_complete'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'cscope.vim'
+Plugin 'session.vim'
 
 Plugin 'mappingmanager'
 " All of your Plugins must be added before the following line
@@ -106,6 +108,9 @@ set laststatus=2                    "一个文件也要有状态栏
 let Grep_Default_Filelist = '*.c *.cpp *.hpp *.cc *.h *.ini *.txt *.xml *.lua *.proto *.vim'
 " powerline config end
 
+" cscope start 
+let g:cscope_silent=1
+" cscope end
 " end of external plugin
 " 保存配置文件立即生效
 autocmd! bufwritepost .vimrc source ~/.vimrc

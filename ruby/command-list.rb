@@ -4,25 +4,41 @@ CommandList::register_list(
   :map_item_with_list => true,
   :items => [
     {
-      :function    => 'CheckLineStepDefinition()',
-      :map         => 'cl',
-      :text        => '[c]heck step definition on the [l]ine',
+      :function    => ':copen',
+      :map         => 'o',
+      :text        => '[o]pen quickfix',
     },
-    {
-      :function    => 'CheckFileStepDefinition()',
-      :map         => 'cf',
-      :text        => '[c]heck step definition for the [f]ile',
+	{
+      :function    => ':cclose',
+      :map         => 'c',
+      :text        => '[c]lose quickfix',
     },
-    {
-      :function    => 'StepFileRecommendations()',
-      :map         => 'ns',
-      :text        => '[n]ew [s]tep definition',
+	{
+      :function    => ':cp',
+      :map         => 'p',
+      :text        => '[p]re error',
     },
-    {
-      :function    => '\<C-W>\<C-]>\<C-W>T',
-      :map         => 'j',
-      :text        => '[j]ump to step definition',
+	{
+      :function    => ':cn',
+      :map         => 'n',
+      :text        => '[n]ext error',
+    },
+	{
+      :function    => ':cw',
+      :map         => 'w',
+      :text        => '[w]open qkfix if have',
+    },
+	{
+      :function    => ':col',
+      :map         => 'l',
+      :text        => '[l]pre qkfix',
+    },
+	{
+      :function    => ':cnew',
+      :map         => 'e',
+      :text        => '[e]next qkfix',
     }
+
   ]
 )
 
@@ -94,16 +110,34 @@ CommandList::register_list(
   ]
 )
 CommandList::register_list(
-  :name  => 'lookupfile',
+  :name  => 'list',
   :map   =>'<LEADER>l',
   :map_item_with_list => true,
   :items => [
 	{
-	  :function    => ':listmaps',
+	  :function    => ':Listmaps',
 	  :map         => 'm',
 	  :text        => '[m]map list',
 	}
   ]
 )
 
+CommandList::register_list(
+  :name  => 'cscope',
+  :map   =>'<LEADER>f',
+  :map_item_with_list => true,
+  :items => [
+	{
+	  :function    => ':CSCopeToggle',
+	  :map         => 'a',
+	  :text        => '[a]ll command list',
+	},
+	{
+	  :function    => ':LocationList',
+	  :map         => 'l',
+	  :text        => '[l]ocaltionlist toggole',
+	}
+  ]
+
+)
 
