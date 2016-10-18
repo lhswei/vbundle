@@ -1,6 +1,6 @@
 CommandList::register_list(
-  :name  => 'Cucumber',
-  :map   =>'<LEADER>c',
+  :name  => 'Quickfix',
+  :map   =>'<LEADER>q',
   :map_item_with_list => true,
   :items => [
     {
@@ -115,6 +115,31 @@ CommandList::register_list(
   :map_item_with_list => true,
   :items => [
 	{
+	  :function    => ':FufBuffer',
+	  :map         => 'b',
+	  :text        => '[b]Buffer mode',
+	},
+	{
+	  :function    => ':FufFile',
+	  :map         => 'f',
+	  :text        => '[f]File mode',
+	},
+	{
+	  :function    => ':FufDir',
+	  :map         => 'd',
+	  :text        => '[d]Directory mode',
+	},
+	{
+	  :function    => ':FufLine',
+	  :map         => 'l',
+	  :text        => '[l]Line mode',
+	},
+	{
+	  :function    => ':FufQuickfix',
+	  :map         => 'q',
+	  :text        => '[q]Quickfix mode',
+	},
+	{
 	  :function    => ':Listmaps',
 	  :map         => 'm',
 	  :text        => '[m]map list',
@@ -136,6 +161,41 @@ CommandList::register_list(
 	  :function    => ':LocationList',
 	  :map         => 'l',
 	  :text        => '[l]ocaltionlist toggole',
+	},
+	{
+	  :function    => ':CsFindg',
+	  :map         => 'g',
+	  :text        => '[g]Find this definition',
+	},
+	{
+	  :function    => ':CsFindd',
+	  :map         => 'd',
+	  :text        => '[d]Find functions called by this function',
+	},
+	{
+	  :function    => ':CsFindc',
+	  :map         => 'c',
+	  :text        => '[c]Find functions calling this function',
+	},
+	{
+	  :function    => ':CsFindt',
+	  :map         => 't',
+	  :text        => '[t]Find this text string',
+	},
+	{
+	  :function    => ':CsFinde',
+	  :map         => 'e',
+	  :text        => '[e]Find this egrep pattern',
+	},
+	{
+	  :function    => ':CsFindf',
+	  :map         => 'f',
+	  :text        => '[f]Find this file',
+	},
+	{
+	  :function    => ':CsFindi',
+	  :map         => 'i',
+	  :text        => '[i]Find files #including this file',
 	}
   ]
 
