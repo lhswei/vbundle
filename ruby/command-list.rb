@@ -159,8 +159,8 @@ CommandList::register_list(
 	},
 	{
 	  :function    => ':LocationList',
-	  :map         => 'l',
-	  :text        => '[l]ocaltionlist toggole',
+	  :map         => 'o',
+	  :text        => '[o]ocaltionlist toggole',
 	},
 	{
 	  :function    => ':CsFindg',
@@ -196,7 +196,28 @@ CommandList::register_list(
 	  :function    => ':CsFindi',
 	  :map         => 'i',
 	  :text        => '[i]Find files #including this file',
+	},
+	{
+	  :function    => ':CscopeList',
+	  :map         => 'l',
+	  :text        => '[l]ist loaded cscope',
+	},
+	{
+	  :function    => ':CscopeClear',
+	  :map         => 'r',
+	  :text        => '[r]clear cscope',
+	},
+	{
+	  :function    => ':CsUpdateDb',
+	  :map         => 'u',
+	  :text        => '[u]update cscope db',
+	},
+	{
+	  :function    => ':MyMakeLuaTag',
+	  :map         => 'm',
+	  :text        => '[m]yMakeLuaTag',
 	}
+
   ]
 
 )

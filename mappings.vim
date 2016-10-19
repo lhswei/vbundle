@@ -11,12 +11,20 @@ if g:map_index == 1
     command! -n=? -complete=dir -bar CsFinde :call cscope#find('e', expand('<cword>'))
     command! -n=? -complete=dir -bar CsFindf :call cscope#find('f', expand('<cword>'))
     command! -n=? -complete=dir -bar CsFindi :call cscope#find('i', expand('<cword>'))
-    command! -n=? -complete=dir -bar MyMakeTag :call MyMakeTag()
+    command! -n=? -complete=dir -bar CsUpdateDb :call cscope#updateDB()
+    command! -n=? -complete=dir -bar MyMakeLuaTag :call MyMakeLuaTag()
 
 "	map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 endif
 
-function MyMakeTag()
+" tags
+function! MyMakeLuaTag()
+    " cscope
+    silent execute 'cs kill cscope.out'
+    silent execute '!del cscope.* & del tags'
+    silent execute '!find ./ -name "*.lua" > cscope.files'
+    silent execute '!cscope -bkq -i cscope.files'
+
     " ctags
 	" 自定义的LUA函数和变量匹配规则，匹配以下形式
 	" function class:func()
@@ -40,8 +48,16 @@ function MyMakeTag()
     call MyAddTag()
 endfunction
 
-function MyAddTag()
+function! MyAddTag()
     if filereadable("tags")
         set tags=tags
+    endif
+
+    if filereadable("cscope.out")
+        execute "cs add cscope.out"
+        " 同时搜索cscope数据库和标签文件
+        set cst
+        " 优先搜索标签文件，失败后再搜索cscope数据库
+        set csto=1
     endif
 endfunction
