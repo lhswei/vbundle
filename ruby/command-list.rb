@@ -160,7 +160,7 @@ CommandList::register_list(
 	{
 	  :function    => ':LocationList',
 	  :map         => 'o',
-	  :text        => '[o]ocaltionlist toggole',
+	  :text        => '[o]localtionlist toggole',
 	},
 	{
 	  :function    => ':CsFindg',

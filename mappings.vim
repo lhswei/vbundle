@@ -17,6 +17,8 @@ if g:map_index == 1
 "	map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 endif
 
+
+
 " tags
 function! MyMakeLuaTag()
     " cscope
@@ -61,3 +63,5 @@ function! MyAddTag()
         set csto=1
     endif
 endfunction
+
+

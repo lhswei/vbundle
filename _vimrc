@@ -53,7 +53,7 @@ Plugin 'findfuncname.vim'
 Plugin 'https://github.com/lhswei/command-list.git' "Plugin 'command-list'
 Plugin 'neocomplcache-snippets_complete'
 Plugin 'easymotion/vim-easymotion'
-Plugin 'cscope.vim'
+Plugin 'https://github.com/lhswei/cscope.vim.git'  "Plugin 'cscope.vim'
 Plugin 'session.vim'
 
 Plugin 'mappingmanager'
@@ -109,6 +109,16 @@ let Grep_Default_Filelist = '*.c *.cpp *.hpp *.cc *.h *.ini *.txt *.xml *.lua *.
 
 " cscope start 
 let g:cscope_silent=1
+function! AutoLoadVimFile()
+    if filereadable(".autoloadvimfile.vim")
+		source ./.autoloadvimfile.vim
+    endif
+endfunction 
+if !exists('g:autoloadvimfile')
+  let g:autoloadvimfile = 1 
+  call AutoLoadVimFile()
+endif
+
 " cscope end
 " end of external plugin
 " 保存配置文件立即生效
