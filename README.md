@@ -1,14 +1,14 @@
-# vbundle
-# vim vbundle插件
+### vbundle   
+### vim vbundle插件   
 
-# ~/.vimrc 里面的内容
+### ~/.vimrc 里面的内容
 
-# source ~/.vim/_vimrc       
-# autocmd! bufwritepost .vimrc source ~/.vimrc
+### source ~/.vim/_vimrc        
+### autocmd! bufwritepost .vimrc source ~/.vimrc   
 
-# 真正的配置在
+### 真正的配置在
 
-# ~/.vim/_vimrc
+### ~/vbundle/_vimrc   
 
 #step:
 
@@ -16,13 +16,15 @@ git clone https://github.com/lhswei/vbundle.git
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-vim ~/.vimrc  #edit with 
-
-source ~/.vim/_vimrc       
+vim ~/.vimrc   
+#edit with   
+```vim
+source ~/vbundle/_vimrc       
 
 autocmd! bufwritepost .vimrc source ~/.vimrc
+```
 
-#save and then 
+#save and then    
 :BundleInstall 
 
 
